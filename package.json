@@ -1,0 +1,30 @@
+{
+  "name": "car-auction-system",
+  "version": "1.0.0",
+  "description": "It is a car auction system which is for bidding the car in real time",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koutilyanamdeo/car-auction-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/koutilyanamdeo/car-auction-system/issues"
+  },
+  "homepage": "https://github.com/koutilyanamdeo/car-auction-system#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.3",
+    "nodemon": "^3.1.10"
+  }
+}
