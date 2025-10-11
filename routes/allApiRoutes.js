@@ -25,4 +25,6 @@ router.put('/bid', updateBid);
 
 router.post('/dealer', createDealer);
 router.post('/dealer/login', loginDealer);
+
+
 module.exports = router;
