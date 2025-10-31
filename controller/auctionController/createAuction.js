@@ -1,5 +1,5 @@
 const auctionModel = require('../../model/auctionModel');
-const carModel = require('../../models/carModel');
+const carModel = require('../../model/carModel');
 
 const createAuction = async (req, res) => {
     try {
