@@ -15,6 +15,19 @@ const updateBid = require('../controller/bidController/updateBid');
 const createDealer = require('../controller/dealerController/createDealer');
 const loginDealer = require('../controller/dealerController/loginDealer');
 
+//auction api routes can be added here
+const createAuction = require('../controller/auctionController/createAuction');
+const placeAuctionBid = require('../controller/auctionController/placeAuctionBid');
+const startAuction = require('../controller/auctionController/startAuction');
+const generateAuctionToken = require('../controller/auctionController/generateAuctionToken');
+const getWinnerAuction = require('../controller/auctionController/getWinnerAuction');
+
+router.post('/auction', createAuction);
+router.post('/auction/bid', placeAuctionBid);
+router.put('/auction/start', startAuction);
+router.post('/auction/token', generateAuctionToken);
+router.get('/auction/winner/:id', getWinnerAuction);
+
 router.post('/car', createCar);
 router.get('/car', getAllCars);
 router.get('/car/:id', getCarById);
@@ -25,4 +38,7 @@ router.put('/bid', updateBid);
 
 router.post('/dealer', createDealer);
 router.post('/dealer/login', loginDealer);
+
+
+
 module.exports = router;
