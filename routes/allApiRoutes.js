@@ -22,11 +22,12 @@ const startAuction = require('../controller/auctionController/startAuction');
 const generateAuctionToken = require('../controller/auctionController/generateAuctionToken');
 const getWinnerAuction = require('../controller/auctionController/getWinnerAuction');
 
-router.post('/auction', createAuction);
-router.post('/auction/bid', placeAuctionBid);
-router.put('/auction/start', startAuction);
+const JWTAuthorisation = require('../middleware/JWTAuthorisation');
+router.post('/auction', JWTAuthorisation, createAuction);
+router.post('/auction/bid',JWTAuthorisation, placeAuctionBid);
+router.put('/auction/start',JWTAuthorisation, startAuction);
 router.post('/auction/token', generateAuctionToken);
-router.get('/auction/winner/:id', getWinnerAuction);
+router.get('/auction/winner/:id',JWTAuthorisation, getWinnerAuction);
 
 router.post('/car', createCar);
 router.get('/car', getAllCars);
